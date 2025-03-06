@@ -24,14 +24,17 @@ const projects = (await getCollection('blog')).sort(
 				tagline="See what I've been writing about recently."
 				align="start"
 			/>
+			<p>
+				In construction...
+			</p>
 			<Grid variant="offset">
-				{
+				<!-- {
 					projects.map((project) => (
 						<li>
 							<PortfolioPreview project={project} />
 						</li>
 					))
-				}
+				} -->
 			</Grid>
 		</main>
 		<ContactCTA />
