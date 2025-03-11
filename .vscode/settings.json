@@ -1,9 +1,9 @@
 {
 	"prettier.configPath": ".prettierrc",
 	"prettier.documentSelectors": ["**/*.astro"],
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  },
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
 	"[astro]": {
 		"editor.formatOnSave": true,
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
