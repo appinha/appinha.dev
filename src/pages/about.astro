@@ -1,10 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
+import AboutEntry from "../components/AboutEntry.astro";
 import ContactCTA from "../components/ContactCTA.astro";
 import Hero from "../components/Hero.astro";
 import { Image } from "astro:assets";
 import image from "../../public/assets/at-work.jpg";
+
+const keyOutcomes = "<p><b>Key outcomes:</b></p>";
+const aboutTheCompany = "<p><b>About the company:</b></p>";
 ---
 
 <BaseLayout title="About | Amanda P. Pinha" description="About Amanda P. Pinha Lorem Ipsum">
@@ -21,7 +25,7 @@ import image from "../../public/assets/at-work.jpg";
 		<main class="wrapper about">
 			<section>
 				<h2 class="section-title">Introduction</h2>
-				<div class="content">
+				<div class="content content-text">
 					<p>
 						Amanda is a versatile and results-driven technology professional with over 15 years of
 						experience, the last third of which have been spent in software engineering. She has
@@ -47,16 +51,19 @@ import image from "../../public/assets/at-work.jpg";
 				</div>
 			</section>
 
+			<hr />
+
 			<section>
 				<h2 class="section-title">Experience</h2>
 				<div class="content">
-					<div class="content-section">
-						<img alt="Clever Real Estate's logo" src="/assets/clever-logo.png" />
-						<div class="content-text">
-							<div class="content-heading">
-								<h3>Full-stack Software Engineer @ Clever Real Estate</h3>
-								<span>Jun 2024 - Present · United States · Remote</span>
-							</div>
+					<AboutEntry
+						imgSrc="/assets/clever-logo.png"
+						imgAlt="Clever Real Estate's logo"
+						title="Full-stack Software Engineer @ Clever Real Estate"
+						subTitle="Jun 2024 - Present · United States · Remote"
+						skills="Typescript, React, React Native, Redux/RTK, Vite, NextJS, Expo, Tailwind, Web Components, Python, Django, PostgreSQL, Docker, REST APIs, Sentry, CI/CD, NPM publishing, Design System"
+					>
+						<>
 							<p>
 								Clever Real Estate connects people with the most trustworthy advice and the best
 								solutions for every step of their real estate journey. At the Core team, contributed
@@ -64,7 +71,7 @@ import image from "../../public/assets/at-work.jpg";
 								productivity and delivery quality while driving business growth through feature
 								development.
 							</p>
-							<p>Key outcomes:</p>
+							<Fragment set:html={keyOutcomes} />
 							<ul>
 								<li>
 									Rearchitected and enhanced the back-office app supporting an internal team
@@ -89,28 +96,24 @@ import image from "../../public/assets/at-work.jpg";
 									</li>
 								</li>
 							</ul>
-							<div class="content-skills">
-								Typescript, React, React Native, Redux/RTK, Vite, NextJS, Expo, Tailwind, Web
-								Components, Python, Django, PostgreSQL, Docker, REST APIs, Sentry, CI/CD, NPM
-								publishing, Design System
-							</div>
-						</div>
-					</div>
-
-					<div class="content-section">
-						<img alt="Hinge Health's logo" src="/assets/hinge-health-logo.jpg" />
-						<div class="content-text">
-							<div class="content-heading">
-								<h3>Full-stack Software Engineer @ Hinge Health</h3>
-								<span>Mar 2023 - May 2024 · 1 yr 3 mos · United States · Remote</span>
-							</div>
+						</>
+					</AboutEntry>
+					<hr />
+					<AboutEntry
+						imgSrc="/assets/hinge-health-logo.jpg"
+						imgAlt="Hinge Health's logo"
+						title="Full-stack Software Engineer @ Hinge Health"
+						subTitle="Mar 2023 - May 2024 · 1 yr 3 mos · United States · Remote"
+						skills="Typescript, React Native, Expo, Redux/RTK, GraphQL/Apollo, Node, NestJS, Docker, Mixpanel, Datadog, Sentry, CI/CD"
+					>
+						<>
 							<p>
 								Hinge Health is a fast-growing digital health company based in San Francisco, USA,
 								pioneering the world’s most patient-centered Digital Musculoskeletal (MSK) Clinic.
 								At the Onboarding pod, contributed to improving onboarding and retention rates
 								through data-driven product development for the client-facing mobile app.
 							</p>
-							<p>Key outcomes:</p>
+							<Fragment set:html={keyOutcomes} />
 							<ul>
 								<li>
 									Acted as Technical Project Lead and Co-lead of feature development and technical
@@ -128,27 +131,24 @@ import image from "../../public/assets/at-work.jpg";
 									performance, ensuring high-quality standards across development.
 								</li>
 							</ul>
-							<p>About the company:</p>
+							<Fragment set:html={aboutTheCompany} />
 							<p>
 								Hinge Health combines advanced wearable technology with a comprehensive clinical
 								care team to treat and reduce MSK pain, opioid use, and surgeries. Available to
 								millions of members, Hinge Health is the #1 Digital MSK Clinic for health plans and
 								employers, including Google, Boeing, Salesforce, and US Foods.
 							</p>
-							<div class="content-skills">
-								Typescript, React Native, Expo, Redux/RTK, GraphQL/Apollo, Node, NestJS, Docker,
-								Mixpanel, Datadog, Sentry, CI/CD
-							</div>
-						</div>
-					</div>
-
-					<div class="content-section">
-						<img alt="Geekie's logo" src="/assets/geekie-logo.jpg" />
-						<div class="content-text">
-							<div class="content-heading">
-								<h3>Full-stack Software Engineer @ Geekie</h3>
-								<span>Feb 2021 - Mar 2023 · 2 yrs 2 mos · Brazil · Remote</span>
-							</div>
+						</>
+					</AboutEntry>
+					<hr />
+					<AboutEntry
+						imgSrc="/assets/geekie-logo.jpg"
+						imgAlt="Geekie's logo"
+						title="Full-stack Software Engineer @ Geekie"
+						subTitle="Feb 2021 - Mar 2023 · 2 yrs 2 mos · Brazil · Remote"
+						skills="Typescript, React, React Native, Redux, Python, Flask, Pyramid, MongoDB, PostgreSQL, Heroku, AWS, REST APIs, Mixpanel, New Relic, Sentry, SPA, PWA, CI/CD"
+					>
+						<>
 							<p>
 								Geekie is a leading ed-tech/edutech company that is reshaping the k-12 education
 								market in Brazil with its innovative data-driven platform and courseware. I
@@ -156,7 +156,7 @@ import image from "../../public/assets/at-work.jpg";
 								back-office systems, helping empower teachers, students and schools to potentialize
 								their learning achievements.
 							</p>
-							<p>Key outcomes:</p>
+							<Fragment set:html={keyOutcomes} />
 							<ul>
 								<li>
 									Collaborated on creating a feature for school coordinators that provided valuable
@@ -178,7 +178,7 @@ import image from "../../public/assets/at-work.jpg";
 									encrypting sensitive data to ensure secure access.
 								</li>
 							</ul>
-							<p>About the company:</p>
+							<Fragment set:html={aboutTheCompany} />
 							<p>
 								Geekie is an edtech company founded in 2011 with a strong mission to address a
 								nationwide issue in Brazil: students graduating from high school without mastering
@@ -187,20 +187,16 @@ import image from "../../public/assets/at-work.jpg";
 								education sector. In 2021, Geekie was recognized as having the highest-rated
 								educational material in Brazil.
 							</p>
-							<div class="content-skills">
-								Typescript, React, React Native, Redux, Python, Flask, Pyramid, MongoDB, PostgreSQL,
-								Heroku, AWS, REST APIs, Mixpanel, New Relic, Sentry, SPA, PWA, CI/CD
-							</div>
-						</div>
-					</div>
-
-					<div class="content-section">
-						<img alt="ALTAVE's logo" src="/assets/altave-logo.png" />
-						<div class="content-text">
-							<div class="content-heading">
-								<h3>Marketing & Sales Manager @ ALTAVE (Aerospace Startup)</h3>
-								<span>Jun 2016 - Apr 2019 · 2 yrs 11 mos · Brazil · In-office</span>
-							</div>
+						</>
+					</AboutEntry>
+					<hr />
+					<AboutEntry
+						imgSrc="/assets/altave-logo.png"
+						imgAlt="ALTAVE's logo"
+						title="Marketing & Sales Manager @ ALTAVE (Aerospace Startup)"
+						subTitle="Jun 2016 - Apr 2019 · 2 yrs 11 mos · Brazil · In-office"
+					>
+						<>
 							<p>
 								Created and structured the Marketing department, then built and managed a team
 								responsible for the company's communications, sales marketing & branding, public
@@ -212,74 +208,60 @@ import image from "../../public/assets/at-work.jpg";
 								management. Additionally, introduced the Predictable Revenue methodology, also known
 								as "sales machine".
 							</p>
-							<p>About the company:</p>
+							<Fragment set:html={aboutTheCompany} />
 							<p>
 								ALTAVE develops lighter than air vehicles, was born in ITA's startup incubator and
 								is the only one of its kind in the Southern Hemisphere.
 							</p>
-						</div>
-					</div>
-
-					<div class="content-section">
-						<img src="/assets/bim-logo.jpg" />
-						<div class="content-text">
-							<div class="content-heading">
-								<h3>
-									Building Information Technology (BIM) Specialist & Consultant @ Construction
-									Industry
-								</h3>
-								<span>Dec 2010 - Feb 2021 · 10 yrs 2 mos · Brazil · In-office</span>
-							</div>
-							<p>
-								IT Specialist & Consultant for Architecture, Engineering, and Construction
-								companies, aiding in the implementation, training, and optimization of their usage
-								of cutting-edge technology for building design and analysis.
-							</p>
-						</div>
-					</div>
+						</>
+					</AboutEntry>
+					<hr />
+					<AboutEntry
+						imgSrc="/assets/bim-logo.jpg"
+						imgAlt="Building Information Modeling (BIM)"
+						title="Building Information Technology (BIM) Specialist & Consultant @ Construction Industry"
+						subTitle="Dec 2010 - Feb 2021 · 10 yrs 2 mos · Brazil · In-office"
+					>
+						<p>
+							IT Specialist & Consultant for Architecture, Engineering, and Construction companies,
+							aiding in the implementation, training, and optimization of their usage of
+							cutting-edge technology for building design and analysis.
+						</p>
+					</AboutEntry>
 				</div>
 			</section>
+
+			<hr />
 
 			<section>
 				<h2 class="section-title">Education</h2>
 				<div class="content">
-					<div class="content-section">
-						<img alt="42 school's logo" src="/assets/42-logo.jpg" />
-						<div class="content-text">
-							<div class="content-heading">
-								<h3>École 42 - Computer Software Engineering</h3>
-								<span>2019 - 2022</span>
-							</div>
-							<p>
-								Studied Software Engineering at a disruptive higher education institution known for
-								its unique project-based approach and no-teacher, peer-to-peer learning model. As
-								part of a global initiative, École 42 offers an innovative way of learning
-								technology, emphasizing collaborative, self-directed learning without traditional
-								classrooms or instructors. Students, referred to as "cadets," are immersed in
-								real-world projects, developing both technical expertise and critical life skills.
-								The curriculum, which is entirely free for those who pass the rigorous selection
-								process, fosters autonomy, problem-solving, and resilience, preparing students for
-								the fast-paced tech industry.
-							</p>
-							<div class="content-skills">
-								<b>Hard-skills:</b> C/C++, Makefile, Shell/Bash, Git, Networks, Docker, SQL, Web (HTML,
-								CSS, WordPress), Computer Graphics.
-							</div>
-							<div class="content-skills">
-								<b>Soft-skills:</b> Self-learning, proactivity, teamwork, time and project management,
-								adaptability, and resilience.
-							</div>
-						</div>
-					</div>
-
-					<div class="content-section">
-						<img alt="USP's logo" src="/assets/usp-logo.jpg" />
-						<div class="content-text">
-							<div class="content-heading">
-								<h3>University of São Paulo (USP) - Master of Science, Architecture Technology</h3>
-								<span>2015 - 2017</span>
-							</div>
-							<p></p>
+					<AboutEntry
+						imgSrc="/assets/42-logo.jpg"
+						imgAlt="42 school's logo"
+						title="École 42 - Computer Software Engineering"
+						subTitle="2019 - 2022"
+						skills="C/C++, Makefile, Shell/Bash, Git, Networks, Docker, SQL, Web (HTML, CSS, WordPress), Computer Graphics"
+					>
+						<p>
+							Studied Software Engineering at a disruptive higher education institution known for
+							its unique project-based approach and no-teacher, peer-to-peer learning model. As part
+							of a global initiative, École 42 offers an innovative way of learning technology,
+							emphasizing collaborative, self-directed learning without traditional classrooms or
+							instructors. Students, referred to as "cadets," are immersed in real-world projects,
+							developing both technical expertise and critical life skills. The curriculum, which is
+							entirely free for those who pass the rigorous selection process, fosters autonomy,
+							problem-solving, and resilience, preparing students for the fast-paced tech industry.
+						</p>
+					</AboutEntry>
+					<hr />
+					<AboutEntry
+						imgSrc="/assets/usp-logo.jpg"
+						imgAlt="USP's logo"
+						title="University of São Paulo (USP) - Master of Science, Architecture Technology"
+						subTitle="2015 - 2017"
+					>
+						<>
 							<p><b>Grade:</b> 10/10.</p>
 							<p>
 								<b>Research Thesis:</b> “BPS (Building Performance Simulation) and BIM (Building Information
@@ -298,39 +280,32 @@ import image from "../../public/assets/at-work.jpg";
 								building lifecycle management, making a meaningful impact on the future of
 								architectural practice.
 							</p>
-						</div>
-					</div>
-
-					<div class="content-section">
-						<img alt="ENSAG's logo" src="/assets/ensag-logo.png" />
-						<div class="content-text">
-							<div class="content-heading">
-								<h3>
-									École Nationale Supérieure d'Architecture de Grenoble (ENSAG) - Academic Exchange,
-									Master 1
-								</h3>
-								<span>2011 - 2012</span>
-							</div>
-							<p>
-								Participated in an academic exchange program at one of France's leading architecture
-								schools. At ENSAG, I collaborated with both local and international students on
-								innovative architectural projects, where we explored cutting-edge generative design
-								technologies. The exchange allowed me to engage with diverse cultural perspectives
-								on architecture, enriching my approach to design and expanding my understanding of
-								how digital tools can enhance architectural creativity and problem-solving.
-							</p>
-						</div>
-					</div>
-
-					<div class="content-section">
-						<img alt="USP's logo" src="/assets/usp-logo.jpg" />
-						<div class="content-text">
-							<div class="content-heading">
-								<h3>
-									University of São Paulo (USP) - Bachelor's Degree, Architecture and Urban Planning
-								</h3>
-								<span>2008 - 2014</span>
-							</div>
+						</>
+					</AboutEntry>
+					<hr />
+					<AboutEntry
+						imgSrc="/assets/ensag-logo.png"
+						imgAlt="ENSAG's logo"
+						title="École Nationale Supérieure d'Architecture de Grenoble (ENSAG) - Academic Exchange, Master 1"
+						subTitle="2011 - 2012"
+					>
+						<p>
+							Participated in an academic exchange program at one of France's leading architecture
+							schools. At ENSAG, I collaborated with both local and international students on
+							innovative architectural projects, where we explored cutting-edge generative design
+							technologies. The exchange allowed me to engage with diverse cultural perspectives on
+							architecture, enriching my approach to design and expanding my understanding of how
+							digital tools can enhance architectural creativity and problem-solving.
+						</p>
+					</AboutEntry>
+					<hr />
+					<AboutEntry
+						imgSrc="/assets/usp-logo.jpg"
+						imgAlt="USP's logo"
+						title="University of São Paulo (USP) - Bachelor's Degree, Architecture and Urban Planning"
+						subTitle="2008 - 2014"
+					>
+						<>
 							<p>
 								Graduated with a Bachelor's degree in Architecture and Urban Planning from the
 								University of São Paulo (USP), one of the most prestigious institutions in Latin
@@ -345,14 +320,16 @@ import image from "../../public/assets/at-work.jpg";
 								<b>Final paper:</b> "School architecture in the knowledge era: the renovation of space
 								for the construction of new generations"
 							</p>
-						</div>
-					</div>
+						</>
+					</AboutEntry>
 				</div>
 			</section>
 
+			<hr />
+
 			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
+				<h2 class="section-title">Soft Skills</h2>
+				<div class="content content-bullets">
 					<ul>
 						<li>Results-driven & very organized</li>
 						<li>Strong leadership & mentorship</li>
@@ -363,9 +340,11 @@ import image from "../../public/assets/at-work.jpg";
 				</div>
 			</section>
 
+			<hr />
+
 			<section>
 				<h2 class="section-title">Languages</h2>
-				<div class="content">
+				<div class="content content-bullets">
 					<ul>
 						<li><b>English</b> - fluent/bilingual</li>
 						<li><b>Portuguese</b> - native</li>
@@ -407,19 +386,30 @@ import image from "../../public/assets/at-work.jpg";
 		flex-direction: column;
 		gap: 0.5rem;
 		color: var(--gray-200);
+		font-size: var(--text-base);
+	}
+
+	li:not(:last-child) {
+		margin-bottom: 0.75rem;
+	}
+
+	hr {
+		grid-column: 1 / 4;
+		border: 0;
+		border-top: 1px solid var(--gray-800);
 	}
 
 	.section-title {
 		grid-column-start: 1;
-		font-size: var(--text-xl);
 		color: var(--gray-0);
+		margin-bottom: 1rem;
 	}
 
 	.content {
 		grid-column: 2 / 4;
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
+		gap: 3rem;
 	}
 
 	.content :global(a) {
@@ -433,46 +423,12 @@ import image from "../../public/assets/at-work.jpg";
 		text-decoration-color: currentColor;
 	}
 
-	.content-section {
-		display: flex;
-		align-items: start;
-		flex-direction: row;
-		gap: 1.5rem;
-		margin-bottom: 2rem;
-	}
-
-	.content-heading {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-	}
-
-	.content-heading h3 {
-		font-size: var(--text-lg);
-		font-weight: 600;
-	}
-
-	.content-heading span {
-		font-size: var(--text-base);
-		color: var(--gray-400);
-	}
-
 	.content-text {
-		display: flex;
-		align-items: start;
-		flex-direction: column;
 		gap: 1rem;
 	}
 
-	.content img {
-		width: 60px;
-		object-fit: contain;
-		object-position: middle;
-	}
-
-	.content-skills {
-		font-size: var(--text-md);
-		color: var(--accent-dark);
+	.content-bullets li {
+		margin: 0;
 	}
 
 	@media (min-width: 50em) {
@@ -499,10 +455,6 @@ import image from "../../public/assets/at-work.jpg";
 		section {
 			display: contents;
 			font-size: var(--text-lg);
-		}
-
-		.content img {
-			width: 48px;
 		}
 	}
 </style>
