@@ -1,13 +1,14 @@
 ---
-import { socials } from '../constants/socials';
-import Icon from './Icon.astro';
+import { socials } from "../constants/socials";
+import Icon from "./Icon.astro";
 const currentYear = new Date().getFullYear();
 ---
 
 <footer>
 	<div class="group">
 		<p>
-			Designed & Developed in Portland with <a href="https://astro.build/">Astro</a>
+			Designed & Developed in Portland with
+			<a href="https://astro.build/">Astro</a>
 			<Icon icon="rocket-launch" size="1.2em" />
 		</p>
 		<p>&copy; {currentYear} Amanda P. Pinha</p>
@@ -15,7 +16,9 @@ const currentYear = new Date().getFullYear();
 	<p class="socials">
 		{
 			socials.map(({ href, label }) => (
-				<a href={href} target="_blank" rel="noopener noreferrer">{label}</a>
+				<a href={href} target="_blank" rel="noopener noreferrer">
+					{label}
+				</a>
 			))
 		}
 	</p>

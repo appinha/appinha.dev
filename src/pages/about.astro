@@ -1,9 +1,9 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
-import ContactCTA from '../components/ContactCTA.astro';
-import Hero from '../components/Hero.astro';
-import { Image } from 'astro:assets';
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
+import { Image } from "astro:assets";
 import image from "../../public/assets/at-work.jpg";
 ---
 
@@ -14,22 +14,36 @@ import image from "../../public/assets/at-work.jpg";
 				title="About"
 				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
 				align="start"
-			>
-			</Hero>
-
-			<Image
-				src={image}
-				alt="Amanda P. Pinha at work with a colleague"
 			/>
+			<Image src={image} alt="Amanda P. Pinha at work with a colleague" />
 		</header>
 
 		<main class="wrapper about">
 			<section>
 				<h2 class="section-title">Introduction</h2>
 				<div class="content">
-					<p>Amanda is a versatile and results-driven technology professional with over 15 years of experience, the last third of which have been spent in software engineering. She has worked across diverse roles and industries, ranging from early-stage startups to established companies in sectors such as construction, aerospace, healthcare, education, and real estate.</p>
-					<p>Her passion lies in developing high-quality, functional applications that not only meet user needs but also delight them through intuitive design and seamless user experiences. With a strong foundation in both front-end and back-end development, Amanda is skilled in navigating complex technical challenges while keeping the end-user experience front and center. She thrives in collaborative environments and is always eager to embrace new tools, languages, and industries, demonstrating her adaptability and growth mindset.</p>
-					<p>Amanda's breadth of experience also extends beyond software engineering, having held roles in leadership, design, marketing, and consulting, which has enabled her to approach problems from a holistic perspective. Her diverse background equips her with the ability to quickly learn and apply new skills in a variety of contexts, making her a valuable asset to teams seeking innovation and creative solutions.</p>
+					<p>
+						Amanda is a versatile and results-driven technology professional with over 15 years of
+						experience, the last third of which have been spent in software engineering. She has
+						worked across diverse roles and industries, ranging from early-stage startups to
+						established companies in sectors such as construction, aerospace, healthcare, education,
+						and real estate.
+					</p>
+					<p>
+						Her passion lies in developing high-quality, functional applications that not only meet
+						user needs but also delight them through intuitive design and seamless user experiences.
+						With a strong foundation in both front-end and back-end development, Amanda is skilled
+						in navigating complex technical challenges while keeping the end-user experience front
+						and center. She thrives in collaborative environments and is always eager to embrace new
+						tools, languages, and industries, demonstrating her adaptability and growth mindset.
+					</p>
+					<p>
+						Amanda's breadth of experience also extends beyond software engineering, having held
+						roles in leadership, design, marketing, and consulting, which has enabled her to
+						approach problems from a holistic perspective. Her diverse background equips her with
+						the ability to quickly learn and apply new skills in a variety of contexts, making her a
+						valuable asset to teams seeking innovation and creative solutions.
+					</p>
 				</div>
 			</section>
 
@@ -37,86 +51,172 @@ import image from "../../public/assets/at-work.jpg";
 				<h2 class="section-title">Experience</h2>
 				<div class="content">
 					<div class="content-section">
-						<img
-							alt="Clever Real Estate's logo"
-							src="/assets/clever-logo.png"
-						/>
+						<img alt="Clever Real Estate's logo" src="/assets/clever-logo.png" />
 						<div class="content-text">
 							<div class="content-heading">
 								<h3>Full-stack Software Engineer @ Clever Real Estate</h3>
 								<span>Jun 2024 - Present · United States · Remote</span>
 							</div>
-							<p>Clever Real Estate connects people with the most trustworthy advice and the best solutions for every step of their real estate journey. At the Core team, contributed to product, technical and process improvements that significantly enhanced team productivity and delivery quality while driving business growth through feature development.</p>
+							<p>
+								Clever Real Estate connects people with the most trustworthy advice and the best
+								solutions for every step of their real estate journey. At the Core team, contributed
+								to product, technical and process improvements that significantly enhanced team
+								productivity and delivery quality while driving business growth through feature
+								development.
+							</p>
 							<p>Key outcomes:</p>
 							<ul>
-								<li>Rearchitected and enhanced the back-office app supporting an internal team responsible for a key revenue-generating function. Upon joining the company, took ownership of the app's Proof of Concept (POC), overhauling its architecture by modernizing the tech stack, fixing critical bugs, rearchitecting the system, applying best design patterns, and adding new features to enhance functionality, scalability, and maintainability.
-								<!-- <li>Collaborated closely on the development of the client-facing mobile app from its inception, working on features that directly impact user experience and business outcomes. This role involved key decisions on architecture and UI/UX design, ensuring a seamless, user-centric solution for effectively engaging and retaining app users.</li> -->
-								<li>Proposed and developed a framework for building Web Components with React, TypeScript, Tailwind, and Vite. This framework enabled the easy integration of React-based components into other projects in a technology-agnostic manner, significantly improving code reuse and development speed, which in turn contributed the company's content strategy and lead generation.</li>
-								<li>Spearheaded the creation and development of an internal library of design system components, utilities, and other reusable assets, streamlining the implementation of consistent UI elements and code sharing across multiple projects via a NPM package.</li>
+								<li>
+									Rearchitected and enhanced the back-office app supporting an internal team
+									responsible for a key revenue-generating function. Upon joining the company, took
+									ownership of the app's Proof of Concept (POC), overhauling its architecture by
+									modernizing the tech stack, fixing critical bugs, rearchitecting the system,
+									applying best design patterns, and adding new features to enhance functionality,
+									scalability, and maintainability.
+									<!-- <li>Collaborated closely on the development of the client-facing mobile app from its inception, working on features that directly impact user experience and business outcomes. This role involved key decisions on architecture and UI/UX design, ensuring a seamless, user-centric solution for effectively engaging and retaining app users.</li> -->
+									<li>
+										Proposed and developed a framework for building Web Components with React,
+										TypeScript, Tailwind, and Vite. This framework enabled the easy integration of
+										React-based components into other projects in a technology-agnostic manner,
+										significantly improving code reuse and development speed, which in turn
+										contributed the company's content strategy and lead generation.
+									</li>
+									<li>
+										Spearheaded the creation and development of an internal library of design system
+										components, utilities, and other reusable assets, streamlining the
+										implementation of consistent UI elements and code sharing across multiple
+										projects via a NPM package.
+									</li>
+								</li>
 							</ul>
-							<div class="content-skills">Typescript, React, React Native, Redux/RTK, Vite, NextJS, Expo, Tailwind, Web Components, Python, Django, PostgreSQL, Docker, REST APIs, Sentry, CI/CD, NPM publishing, Design System</div>
+							<div class="content-skills">
+								Typescript, React, React Native, Redux/RTK, Vite, NextJS, Expo, Tailwind, Web
+								Components, Python, Django, PostgreSQL, Docker, REST APIs, Sentry, CI/CD, NPM
+								publishing, Design System
+							</div>
 						</div>
 					</div>
 
 					<div class="content-section">
-						<img
-							alt="Hinge Health's logo"
-							src="/assets/hinge-health-logo.jpg"
-						/>
+						<img alt="Hinge Health's logo" src="/assets/hinge-health-logo.jpg" />
 						<div class="content-text">
 							<div class="content-heading">
 								<h3>Full-stack Software Engineer @ Hinge Health</h3>
 								<span>Mar 2023 - May 2024 · 1 yr 3 mos · United States · Remote</span>
 							</div>
-							<p>Hinge Health is a fast-growing digital health company based in San Francisco, USA, pioneering the world’s most patient-centered Digital Musculoskeletal (MSK) Clinic. At the Onboarding pod, contributed to improving onboarding and retention rates through data-driven product development for the client-facing mobile app.</p>
+							<p>
+								Hinge Health is a fast-growing digital health company based in San Francisco, USA,
+								pioneering the world’s most patient-centered Digital Musculoskeletal (MSK) Clinic.
+								At the Onboarding pod, contributed to improving onboarding and retention rates
+								through data-driven product development for the client-facing mobile app.
+							</p>
 							<p>Key outcomes:</p>
 							<ul>
-								<li>Acted as Technical Project Lead and Co-lead of feature development and technical projects, collaborating with Product Managers and Designers to de-risk, plan, and execute cost-effective solutions. Focused on clear communication, UX details, and making strategic trade-offs between requirements and effort.</li>
-								<li>Drove efforts to enhance app performance, reduce complexity, and optimize the onboarding feature - one of the highest-priority elements for the success of the business and its patients.</li>
-								<li>Promoted best practices in automated testing, accessibility, code quality and performance, ensuring high-quality standards across development.</li>
+								<li>
+									Acted as Technical Project Lead and Co-lead of feature development and technical
+									projects, collaborating with Product Managers and Designers to de-risk, plan, and
+									execute cost-effective solutions. Focused on clear communication, UX details, and
+									making strategic trade-offs between requirements and effort.
+								</li>
+								<li>
+									Drove efforts to enhance app performance, reduce complexity, and optimize the
+									onboarding feature - one of the highest-priority elements for the success of the
+									business and its patients.
+								</li>
+								<li>
+									Promoted best practices in automated testing, accessibility, code quality and
+									performance, ensuring high-quality standards across development.
+								</li>
 							</ul>
 							<p>About the company:</p>
-							<p>Hinge Health combines advanced wearable technology with a comprehensive clinical care team to treat and reduce MSK pain, opioid use, and surgeries. Available to millions of members, Hinge Health is the #1 Digital MSK Clinic for health plans and employers, including Google, Boeing, Salesforce, and US Foods.</p>
-							<div class="content-skills">Typescript, React Native, Expo, Redux/RTK, GraphQL/Apollo, Node, NestJS, Docker, Mixpanel, Datadog, Sentry, CI/CD</div>
+							<p>
+								Hinge Health combines advanced wearable technology with a comprehensive clinical
+								care team to treat and reduce MSK pain, opioid use, and surgeries. Available to
+								millions of members, Hinge Health is the #1 Digital MSK Clinic for health plans and
+								employers, including Google, Boeing, Salesforce, and US Foods.
+							</p>
+							<div class="content-skills">
+								Typescript, React Native, Expo, Redux/RTK, GraphQL/Apollo, Node, NestJS, Docker,
+								Mixpanel, Datadog, Sentry, CI/CD
+							</div>
 						</div>
 					</div>
 
 					<div class="content-section">
-						<img
-							alt="Geekie's logo"
-							src="/assets/geekie-logo.jpg"
-						/>
+						<img alt="Geekie's logo" src="/assets/geekie-logo.jpg" />
 						<div class="content-text">
 							<div class="content-heading">
 								<h3>Full-stack Software Engineer @ Geekie</h3>
 								<span>Feb 2021 - Mar 2023 · 2 yrs 2 mos · Brazil · Remote</span>
 							</div>
-							<p>Geekie is a leading ed-tech/edutech company that is reshaping the k-12 education market in Brazil with its innovative data-driven platform and courseware. I collaborated in both the client-facing web-mobile shared codebase and the back-office systems, helping empower teachers, students and schools to potentialize their learning achievements.</p>
+							<p>
+								Geekie is a leading ed-tech/edutech company that is reshaping the k-12 education
+								market in Brazil with its innovative data-driven platform and courseware. I
+								collaborated in both the client-facing web-mobile shared codebase and the
+								back-office systems, helping empower teachers, students and schools to potentialize
+								their learning achievements.
+							</p>
 							<p>Key outcomes:</p>
 							<ul>
-								<li>Collaborated on creating a feature for school coordinators that provided valuable insights into student performance, helping identify at-risk students, communicate with parents, and support teachers. By leveraging data from our platform, the feature delivered actionable insights in a user-friendly format, enabling quick, impactful decisions.</li>
-								<li>Worked with a team dedicated to improving the back-office system, streamlining the process of inputting and editing courseware content. This effort enhanced the flexibility and efficiency of managing educational materials, contributing to the system’s overall user experience.</li>
-								<li>Resolved a security vulnerability exploited by students to access homework answers by inspecting request payloads. Implemented a solution that involved rearchitecting the content generation, storage, and delivery process, including encrypting sensitive data to ensure secure access.</li>
+								<li>
+									Collaborated on creating a feature for school coordinators that provided valuable
+									insights into student performance, helping identify at-risk students, communicate
+									with parents, and support teachers. By leveraging data from our platform, the
+									feature delivered actionable insights in a user-friendly format, enabling quick,
+									impactful decisions.
+								</li>
+								<li>
+									Worked with a team dedicated to improving the back-office system, streamlining the
+									process of inputting and editing courseware content. This effort enhanced the
+									flexibility and efficiency of managing educational materials, contributing to the
+									system’s overall user experience.
+								</li>
+								<li>
+									Resolved a security vulnerability exploited by students to access homework answers
+									by inspecting request payloads. Implemented a solution that involved
+									rearchitecting the content generation, storage, and delivery process, including
+									encrypting sensitive data to ensure secure access.
+								</li>
 							</ul>
 							<p>About the company:</p>
-							<p>Geekie is an edtech company founded in 2011 with a strong mission to address a nationwide issue in Brazil: students graduating from high school without mastering fundamental skills in Math and Portuguese. The company developed an educational technology that is now considered one of the six most innovative in the world in the education sector. In 2021, Geekie was recognized as having the highest-rated educational material in Brazil.</p>
-							<div class="content-skills">Typescript, React, React Native, Redux, Python, Flask, Pyramid, MongoDB, PostgreSQL, Heroku, AWS, REST APIs, Mixpanel, New Relic, Sentry, SPA, PWA, CI/CD</div>
+							<p>
+								Geekie is an edtech company founded in 2011 with a strong mission to address a
+								nationwide issue in Brazil: students graduating from high school without mastering
+								fundamental skills in Math and Portuguese. The company developed an educational
+								technology that is now considered one of the six most innovative in the world in the
+								education sector. In 2021, Geekie was recognized as having the highest-rated
+								educational material in Brazil.
+							</p>
+							<div class="content-skills">
+								Typescript, React, React Native, Redux, Python, Flask, Pyramid, MongoDB, PostgreSQL,
+								Heroku, AWS, REST APIs, Mixpanel, New Relic, Sentry, SPA, PWA, CI/CD
+							</div>
 						</div>
 					</div>
 
 					<div class="content-section">
-						<img
-							alt="ALTAVE's logo"
-							src="/assets/altave-logo.png"
-						/>
+						<img alt="ALTAVE's logo" src="/assets/altave-logo.png" />
 						<div class="content-text">
 							<div class="content-heading">
 								<h3>Marketing & Sales Manager @ ALTAVE (Aerospace Startup)</h3>
 								<span>Jun 2016 - Apr 2019 · 2 yrs 11 mos · Brazil · In-office</span>
 							</div>
-							<p>Created and structured the Marketing department, then built and managed a team responsible for the company's communications, sales marketing & branding, public relations, sponsorships & social responsibility, and internal marketing (endomarketing). As the company expanded, took on the responsibility of managing the Marketing & Sales team, overseeing roles from designers to engineers. Implemented a set of digital tools to improve company-wide productivity, including Slack for internal communication, Weekdone for OKR tracking, and Zoho CRM for sales management. Additionally, introduced the Predictable Revenue methodology, also known as "sales machine".</p>
+							<p>
+								Created and structured the Marketing department, then built and managed a team
+								responsible for the company's communications, sales marketing & branding, public
+								relations, sponsorships & social responsibility, and internal marketing
+								(endomarketing). As the company expanded, took on the responsibility of managing the
+								Marketing & Sales team, overseeing roles from designers to engineers. Implemented a
+								set of digital tools to improve company-wide productivity, including Slack for
+								internal communication, Weekdone for OKR tracking, and Zoho CRM for sales
+								management. Additionally, introduced the Predictable Revenue methodology, also known
+								as "sales machine".
+							</p>
 							<p>About the company:</p>
-							<p>ALTAVE develops lighter than air vehicles, was born in ITA's startup incubator and is the only one of its kind in the Southern Hemisphere.</p>
+							<p>
+								ALTAVE develops lighter than air vehicles, was born in ITA's startup incubator and
+								is the only one of its kind in the Southern Hemisphere.
+							</p>
 						</div>
 					</div>
 
@@ -124,10 +224,17 @@ import image from "../../public/assets/at-work.jpg";
 						<img src="/assets/bim-logo.jpg" />
 						<div class="content-text">
 							<div class="content-heading">
-								<h3>Building Information Technology (BIM) Specialist & Consultant @ Construction Industry</h3>
+								<h3>
+									Building Information Technology (BIM) Specialist & Consultant @ Construction
+									Industry
+								</h3>
 								<span>Dec 2010 - Feb 2021 · 10 yrs 2 mos · Brazil · In-office</span>
 							</div>
-							<p>IT Specialist & Consultant for Architecture, Engineering, and Construction companies, aiding in the implementation, training, and optimization of their usage of cutting-edge technology for building design and analysis.</p>
+							<p>
+								IT Specialist & Consultant for Architecture, Engineering, and Construction
+								companies, aiding in the implementation, training, and optimization of their usage
+								of cutting-edge technology for building design and analysis.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -137,26 +244,36 @@ import image from "../../public/assets/at-work.jpg";
 				<h2 class="section-title">Education</h2>
 				<div class="content">
 					<div class="content-section">
-						<img
-							alt="42 school's logo"
-							src="/assets/42-logo.jpg"
-						/>
+						<img alt="42 school's logo" src="/assets/42-logo.jpg" />
 						<div class="content-text">
 							<div class="content-heading">
 								<h3>École 42 - Computer Software Engineering</h3>
 								<span>2019 - 2022</span>
 							</div>
-							<p>Studied Software Engineering at a disruptive higher education institution known for its unique project-based approach and no-teacher, peer-to-peer learning model. As part of a global initiative, École 42 offers an innovative way of learning technology, emphasizing collaborative, self-directed learning without traditional classrooms or instructors. Students, referred to as "cadets," are immersed in real-world projects, developing both technical expertise and critical life skills. The curriculum, which is entirely free for those who pass the rigorous selection process, fosters autonomy, problem-solving, and resilience, preparing students for the fast-paced tech industry.</p>
-							<div class="content-skills"><b>Hard-skills:</b> C/C++, Makefile, Shell/Bash, Git, Networks, Docker, SQL, Web (HTML, CSS, WordPress), Computer Graphics.</div>
-							<div class="content-skills"><b>Soft-skills:</b> Self-learning, proactivity, teamwork, time and project management, adaptability, and resilience.</div>
+							<p>
+								Studied Software Engineering at a disruptive higher education institution known for
+								its unique project-based approach and no-teacher, peer-to-peer learning model. As
+								part of a global initiative, École 42 offers an innovative way of learning
+								technology, emphasizing collaborative, self-directed learning without traditional
+								classrooms or instructors. Students, referred to as "cadets," are immersed in
+								real-world projects, developing both technical expertise and critical life skills.
+								The curriculum, which is entirely free for those who pass the rigorous selection
+								process, fosters autonomy, problem-solving, and resilience, preparing students for
+								the fast-paced tech industry.
+							</p>
+							<div class="content-skills">
+								<b>Hard-skills:</b> C/C++, Makefile, Shell/Bash, Git, Networks, Docker, SQL, Web (HTML,
+								CSS, WordPress), Computer Graphics.
+							</div>
+							<div class="content-skills">
+								<b>Soft-skills:</b> Self-learning, proactivity, teamwork, time and project management,
+								adaptability, and resilience.
+							</div>
 						</div>
 					</div>
 
 					<div class="content-section">
-						<img
-							alt="USP's logo"
-							src="/assets/usp-logo.jpg"
-						/>
+						<img alt="USP's logo" src="/assets/usp-logo.jpg" />
 						<div class="content-text">
 							<div class="content-heading">
 								<h3>University of São Paulo (USP) - Master of Science, Architecture Technology</h3>
@@ -164,39 +281,70 @@ import image from "../../public/assets/at-work.jpg";
 							</div>
 							<p></p>
 							<p><b>Grade:</b> 10/10.</p>
-							<p><b>Research Thesis:</b> “BPS (Building Performance Simulation) and BIM (Building Information Modeling) integration research: A Systematic Review”</p>
-							<p>Completed my Master’s at one of the top universities in the world and the leading institution in Latin America for Architecture and Urban Planning. My research focused on the integration of Building Performance Simulation (BPS) and Building Information Modeling (BIM), exploring how these technologies can work together to improve building design, performance, and sustainability. The thesis involved a systematic review of current methodologies, tools, and case studies, aiming to highlight challenges and opportunities for more effective collaboration between BPS and BIM. This work contributed to advancing knowledge on how integrated digital technologies can optimize energy efficiency, environmental performance, and overall building lifecycle management, making a meaningful impact on the future of architectural practice.</p>
+							<p>
+								<b>Research Thesis:</b> “BPS (Building Performance Simulation) and BIM (Building Information
+								Modeling) integration research: A Systematic Review”
+							</p>
+							<p>
+								Completed my Master’s at one of the top universities in the world and the leading
+								institution in Latin America for Architecture and Urban Planning. My research
+								focused on the integration of Building Performance Simulation (BPS) and Building
+								Information Modeling (BIM), exploring how these technologies can work together to
+								improve building design, performance, and sustainability. The thesis involved a
+								systematic review of current methodologies, tools, and case studies, aiming to
+								highlight challenges and opportunities for more effective collaboration between BPS
+								and BIM. This work contributed to advancing knowledge on how integrated digital
+								technologies can optimize energy efficiency, environmental performance, and overall
+								building lifecycle management, making a meaningful impact on the future of
+								architectural practice.
+							</p>
 						</div>
 					</div>
 
 					<div class="content-section">
-						<img
-							alt="ENSAG's logo"
-							src="/assets/ensag-logo.png"
-						/>
+						<img alt="ENSAG's logo" src="/assets/ensag-logo.png" />
 						<div class="content-text">
 							<div class="content-heading">
-								<h3>École Nationale Supérieure d'Architecture de Grenoble (ENSAG) - Academic Exchange, Master 1</h3>
+								<h3>
+									École Nationale Supérieure d'Architecture de Grenoble (ENSAG) - Academic Exchange,
+									Master 1
+								</h3>
 								<span>2011 - 2012</span>
 							</div>
-							<p>Participated in an academic exchange program at one of France's leading architecture schools. At ENSAG, I collaborated with both local and international students on innovative architectural projects, where we explored cutting-edge generative design technologies. The exchange allowed me to engage with diverse cultural perspectives on architecture, enriching my approach to design and expanding my understanding of how digital tools can enhance architectural creativity and problem-solving.</p>
+							<p>
+								Participated in an academic exchange program at one of France's leading architecture
+								schools. At ENSAG, I collaborated with both local and international students on
+								innovative architectural projects, where we explored cutting-edge generative design
+								technologies. The exchange allowed me to engage with diverse cultural perspectives
+								on architecture, enriching my approach to design and expanding my understanding of
+								how digital tools can enhance architectural creativity and problem-solving.
+							</p>
 						</div>
 					</div>
 
 					<div class="content-section">
-						<img
-							alt="USP's logo"
-							src="/assets/usp-logo.jpg"
-						/>
+						<img alt="USP's logo" src="/assets/usp-logo.jpg" />
 						<div class="content-text">
 							<div class="content-heading">
-								<h3>University of São Paulo (USP) - Bachelor's Degree, Architecture and Urban Planning</h3>
+								<h3>
+									University of São Paulo (USP) - Bachelor's Degree, Architecture and Urban Planning
+								</h3>
 								<span>2008 - 2014</span>
 							</div>
-							<p>Graduated with a Bachelor's degree in Architecture and Urban Planning from the University of São Paulo (USP), one of the most prestigious institutions in Latin America.</p>
+							<p>
+								Graduated with a Bachelor's degree in Architecture and Urban Planning from the
+								University of São Paulo (USP), one of the most prestigious institutions in Latin
+								America.
+							</p>
 							<p><b>Activities and societies:</b> Undergratuate Research, Academic Exchange.</p>
-							<p><b>Undergraduate Research:</b> "The Informational Redundancy in Modelling for Computational Simulation"</p>
-							<p><b>Final paper:</b> "School architecture in the knowledge era: the renovation of space for the construction of new generations"</p>
+							<p>
+								<b>Undergraduate Research:</b> "The Informational Redundancy in Modelling for Computational
+								Simulation"
+							</p>
+							<p>
+								<b>Final paper:</b> "School architecture in the knowledge era: the renovation of space
+								for the construction of new generations"
+							</p>
 						</div>
 					</div>
 				</div>
@@ -222,7 +370,7 @@ import image from "../../public/assets/at-work.jpg";
 						<li><b>English</b> - fluent/bilingual</li>
 						<li><b>Portuguese</b> - native</li>
 						<li><b>French</b> - fluent</li>
-						<li><b>EngSpanishlish</b> - fluent</li>
+						<li><b>Spanish</b> - fluent</li>
 					</ul>
 				</div>
 			</section>
