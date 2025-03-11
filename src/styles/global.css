@@ -231,6 +231,15 @@ h5 {
 	font-size: var(--text-xl);
 }
 
+ul {
+	display: block;
+	list-style-type: disc;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 40px;
+	unicode-bidi: isolate;
+}
+
 /* Utilities */
 
 .sr-only {
