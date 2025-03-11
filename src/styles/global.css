@@ -1,3 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+	--font-system: var(--font-system) --font-body: var(--font-body);
+	--font-brand: var(--font-brand);
+
+	--text-xs: var(--text-xs);
+	--text-sm: var(--text-sm);
+	--text-base: var(--text-base);
+	--text-md: var(--text-md);
+	--text-lg: var(--text-lg);
+	--text-xl: var(--text-xl);
+	--text-2xl: var(--text-2xl);
+	--text-3xl: var(--text-3xl);
+	--text-4xl: var(--text-4xl);
+	--text-5xl: var(--text-5xl);
+
+	--default-transition-duration: var(--theme-transition);
+
+	--color-gray-0: var(--gray-0);
+	--color-gray-50: var(--gray-50);
+	--color-gray-100: var(--gray-100);
+	--color-gray-200: var(--gray-200);
+	--color-gray-300: var(--gray-300);
+	--color-gray-400: var(--gray-400);
+	--color-gray-500: var(--gray-500);
+	--color-gray-600: var(--gray-600);
+	--color-gray-700: var(--gray-700);
+	--color-gray-800: var(--gray-800);
+	--color-gray-900: var(--gray-900);
+	--color-gray-999-basis: var(--gray-999-basis);
+	--color-gray-999_40: var(--gray-999_40);
+	--color-gray-999: var(--gray-999);
+
+	--color-accent-light: var(--accent-light);
+	--color-accent-regular: var(--accent-regular);
+	--color-accent-dark: var(--accent-dark);
+	--color-accent-overlay: var(--accent-overlay);
+	--color-accent-subtle-overlay: var(--accent-subtle-overlay);
+	--color-accent-text-over: var(--accent-text-over);
+
+	--shadow-sm: var(--shadow-sm);
+	--shadow-md: var(--shadow-md);
+	--shadow-lg: var(--shadow-lg);
+}
+
 /* Global variables */
 :root {
 	/* Colors */
@@ -184,6 +230,15 @@ h5 {
 	font-size: var(--text-xl);
 }
 
+ul {
+	display: block;
+	list-style-type: disc;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 40px;
+	unicode-bidi: isolate;
+}
+
 /* Utilities */
 
 .sr-only {
@@ -203,61 +258,4 @@ h5 {
 	max-width: 83rem;
 	margin-inline: auto;
 	padding-inline: 1.5rem;
-}
-
-.stack {
-	display: flex;
-	flex-direction: column;
-}
-
-.gap-2 {
-	gap: 0.5rem;
-}
-.gap-4 {
-	gap: 1rem;
-}
-.gap-8 {
-	gap: 2rem;
-}
-.gap-10 {
-	gap: 2.5rem;
-}
-.gap-15 {
-	gap: 3.75rem;
-}
-.gap-20 {
-	gap: 5rem;
-}
-.gap-30 {
-	gap: 7.5rem;
-}
-.gap-48 {
-	gap: 12rem;
-}
-
-@media (min-width: 50em) {
-	.lg\:gap-2 {
-		gap: 0.5rem;
-	}
-	.lg\:gap-4 {
-		gap: 1rem;
-	}
-	.lg\:gap-8 {
-		gap: 2rem;
-	}
-	.lg\:gap-10 {
-		gap: 2.5rem;
-	}
-	.lg\:gap-15 {
-		gap: 3.75rem;
-	}
-	.lg\:gap-20 {
-		gap: 5rem;
-	}
-	.lg\:gap-30 {
-		gap: 7.5rem;
-	}
-	.lg\:gap-48 {
-		gap: 12rem;
-	}
 }
