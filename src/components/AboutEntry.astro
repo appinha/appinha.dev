@@ -1,0 +1,43 @@
+---
+type Props = {
+	imgSrc: string;
+	imgAlt: string;
+	title: string;
+	subTitle: string;
+	skills?: string;
+};
+
+const { imgSrc, imgAlt, title, subTitle, skills } = Astro.props;
+---
+
+<div class="flex flex-col gap-8">
+	<div class="flex flex-row gap-6">
+		<img alt={imgAlt} src={imgSrc} class="max-h-[60px] object-contain object-center" />
+		<div class="flex flex-col justify-between gap-2">
+			<h3>{title}</h3>
+			<span class="md:text-md text-base text-gray-400">{subTitle}</span>
+		</div>
+	</div>
+
+	<div class="align-start flex flex-col gap-4"><slot /></div>
+
+	{
+		skills && (
+			<div class="text-accent-dark">
+				<b>Technologies:</b> {skills}
+			</div>
+		)
+	}
+</div>
+
+<style>
+	h3 {
+		font-size: var(--text-md);
+	}
+
+	@media (min-width: 50em) {
+		h3 {
+			font-size: var(--text-lg);
+		}
+	}
+</style>
