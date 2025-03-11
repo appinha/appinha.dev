@@ -45,7 +45,7 @@ const { Content } = await render(entry);
 				</div>
 			</header>
 			<main class="wrapper">
-				<div class="flex flex-col gap-10 content">
+				<div class="content flex flex-col gap-10">
 					{entry.data.img && <img src={entry.data.img} alt={entry.data.img_alt || ""} />}
 					<div class="content">
 						<Content />
