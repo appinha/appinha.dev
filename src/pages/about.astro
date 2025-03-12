@@ -12,7 +12,7 @@ const aboutTheCompany = "<p><b>About the company:</b></p>";
 ---
 
 <BaseLayout title="About | Amanda P. Pinha" description="About Amanda P. Pinha Lorem Ipsum">
-	<div class="flex flex-col gap-20">
+	<div class="flex flex-col gap-14 md:gap-20">
 		<header class="wrapper hero">
 			<Hero
 				title="About"
@@ -363,7 +363,7 @@ const aboutTheCompany = "<p><b>About the company:</b></p>";
 	.about {
 		display: flex;
 		flex-direction: column;
-		gap: 3.5rem;
+		gap: 2rem;
 	}
 
 	.hero {
@@ -390,7 +390,7 @@ const aboutTheCompany = "<p><b>About the company:</b></p>";
 	}
 
 	li:not(:last-child) {
-		margin-bottom: 0.75rem;
+		margin-bottom: 0.5rem;
 	}
 
 	hr {
@@ -402,14 +402,14 @@ const aboutTheCompany = "<p><b>About the company:</b></p>";
 	.section-title {
 		grid-column-start: 1;
 		color: var(--gray-0);
-		margin-bottom: 1rem;
 	}
 
 	.content {
 		grid-column: 2 / 4;
 		display: flex;
 		flex-direction: column;
-		gap: 3rem;
+		gap: 2rem;
+		margin-top: 2rem;
 	}
 
 	.content :global(a) {
@@ -424,17 +424,20 @@ const aboutTheCompany = "<p><b>About the company:</b></p>";
 	}
 
 	.content-text {
-		gap: 1rem;
+		gap: 0.75rem;
+		margin-top: 1rem;
 	}
 
 	.content-bullets li {
 		margin: 0;
 	}
 
-	@media (min-width: 50em) {
+	/* md */
+	@media (min-width: 48rem) {
 		.about {
 			display: grid;
 			grid-template-columns: 1fr 60% 1fr;
+			gap: 3.5rem;
 		}
 
 		.about > :global(:first-child) {
@@ -455,6 +458,20 @@ const aboutTheCompany = "<p><b>About the company:</b></p>";
 		section {
 			display: contents;
 			font-size: var(--text-lg);
+		}
+
+		li:not(:last-child) {
+			margin-bottom: 0.75rem;
+		}
+
+		.content {
+			gap: 3rem;
+			margin-top: 0rem;
+		}
+
+		.content-text {
+			gap: 1rem;
+			margin-top: 0rem;
 		}
 	}
 </style>

@@ -10,8 +10,8 @@ type Props = {
 const { imgSrc, imgAlt, title, subTitle, skills } = Astro.props;
 ---
 
-<div class="flex flex-col gap-8">
-	<div class="flex flex-row gap-6">
+<div class="flex flex-col gap-4 md:gap-8">
+	<div class="flex flex-row gap-4 md:gap-6">
 		<img alt={imgAlt} src={imgSrc} class="max-h-[60px] object-contain object-center" />
 		<div class="flex flex-col justify-between gap-2">
 			<h3>{title}</h3>
@@ -19,7 +19,7 @@ const { imgSrc, imgAlt, title, subTitle, skills } = Astro.props;
 		</div>
 	</div>
 
-	<div class="align-start flex flex-col gap-4"><slot /></div>
+	<div class="align-start flex flex-col gap-2 md:gap-4"><slot /></div>
 
 	{
 		skills && (
@@ -35,7 +35,8 @@ const { imgSrc, imgAlt, title, subTitle, skills } = Astro.props;
 		font-size: var(--text-md);
 	}
 
-	@media (min-width: 50em) {
+	/* md */
+	@media (min-width: 48rem) {
 		h3 {
 			font-size: var(--text-lg);
 		}
