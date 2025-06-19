@@ -1,7 +1,7 @@
 {
 	"name": "appinha.dev",
 	"type": "module",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"scripts": {
 		"dev": "astro dev",
 		"build": "astro build",
@@ -13,7 +13,7 @@
 	},
 	"dependencies": {
 		"@tailwindcss/vite": "^4.0.12",
-		"astro": "^5.4.2",
+		"astro": "^5.9.4",
 		"tailwindcss": "^4.0.12"
 	},
 	"devDependencies": {
