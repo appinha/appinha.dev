@@ -51,6 +51,11 @@ import Icon from "./Icon.astro";
 		color: var(--accent-text-over);
 	}
 
+	button[aria-pressed="false"]:hover .icon.dark,
+	button[aria-pressed="true"]:hover .icon.light {
+		color: var(--accent-dark);
+	}
+
 	@media (prefers-reduced-motion: no-preference) {
 		.icon,
 		.icon.light::before {
