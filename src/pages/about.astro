@@ -2,85 +2,100 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 import AboutEntry from "../components/AboutEntry.astro";
+import Collapsible from "../components/Collapsible.astro";
 import ContactCTA from "../components/ContactCTA.astro";
 import Hero from "../components/Hero.astro";
 import { Image } from "astro:assets";
 import image from "../../public/assets/at-work.jpg";
-
-const keyOutcomes = "<p><b>Key outcomes:</b></p>";
-const aboutTheCompany = "<p><b>About the company:</b></p>";
 ---
 
-<BaseLayout title="About | Amanda P. Pinha" description="About Amanda P. Pinha Lorem Ipsum">
-	<div class="flex flex-col gap-14 md:gap-20">
-		<header class="wrapper hero">
-			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
-				align="start"
-			/>
-			<Image src={image} alt="Amanda P. Pinha at work with a colleague" />
-		</header>
+<BaseLayout title="About | Amanda P. Pinha" description="About Amanda P. Pinha">
+	<div class="flex justify-center">
+		<div class="flex max-w-5xl flex-col gap-14 pb-14 md:gap-20">
+			<header class="wrapper hero">
+				<Hero
+					title="About"
+					tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+					align="start"
+				/>
+				<Image src={image} alt="Amanda P. Pinha at a women's university hackathon" />
+			</header>
 
-		<main class="wrapper about">
-			<section>
-				<h2 class="section-title">Introduction</h2>
-				<div class="content content-text">
-					<p>
-						Amanda is a versatile and results-driven technology professional with over 15 years of
-						experience, the last third of which have been spent in software engineering. She has
-						worked across diverse roles and industries, ranging from early-stage startups to
-						established companies in sectors such as construction, aerospace, healthcare, education,
-						and real estate.
-					</p>
-					<p>
-						Her passion lies in developing high-quality, functional applications that not only meet
-						user needs but also delight them through intuitive design and seamless user experiences.
-						With a strong foundation in both front-end and back-end development, Amanda is skilled
-						in navigating complex technical challenges while keeping the end-user experience front
-						and center. She thrives in collaborative environments and is always eager to embrace new
-						tools, languages, and industries, demonstrating her adaptability and growth mindset.
-					</p>
-					<p>
-						Amanda's breadth of experience also extends beyond software engineering, having held
-						roles in leadership, design, marketing, and consulting, which has enabled her to
-						approach problems from a holistic perspective. Her diverse background equips her with
-						the ability to quickly learn and apply new skills in a variety of contexts, making her a
-						valuable asset to teams seeking innovation and creative solutions.
-					</p>
-				</div>
-			</section>
+			<main class="wrapper about">
+				<section>
+					<h2 class="section-title">Summary</h2>
+					<div class="content content-text">
+						<p>
+							Cross-functional and results-driven technology professional with over 15 years of
+							experience, including the last 5 in software engineering. Experienced across diverse
+							roles in software development, leadership, design, marketing, consulting, and academic
+							research. Well-equipped to navigate the challenges of both startups in different
+							stages and established organizations. Brings a unique perspective to delivering
+							customer-centric, scalable solutions, mentoring teams, and leading process
+							improvements.
+						</p>
+					</div>
+				</section>
 
-			<hr />
+				<hr />
 
-			<section>
-				<h2 class="section-title">Experience</h2>
-				<div class="content">
-					<AboutEntry
-						imgSrc="/assets/clever-logo.png"
-						imgAlt="Clever Real Estate's logo"
-						title="Full-stack Software Engineer @ Clever Real Estate"
-						subTitle="Jun 2024 - Present · United States · Remote"
-						skills="Typescript, React, React Native, Redux/RTK, Vite, NextJS, Expo, Tailwind, Web Components, Python, Django, PostgreSQL, Docker, REST APIs, Sentry, CI/CD, NPM publishing, Design System"
-					>
-						<>
+				<section>
+					<h2 class="section-title">Professional Experience</h2>
+
+					<div class="content">
+						<AboutEntry
+							imgSrc="/assets/engine-logo.jpg"
+							imgAlt="Engine's logo"
+							imgClass="border border-gray-500"
+							title="Senior Software Engineer @ Engine"
+							subTitle="Jun 2025 - Present · United States · Remote"
+							skills="Typescript, React, React Native, Redux/RTK, Vite, Vitest, Expo, Styled Components, REST APIs, Microservices, Sentry, Datadog, Amplitude"
+						>
 							<p>
-								Clever Real Estate connects people with the most trustworthy advice and the best
-								solutions for every step of their real estate journey. At the Core team, contributed
-								to product, technical and process improvements that significantly enhanced team
-								productivity and delivery quality while driving business growth through feature
-								development.
+								Working as a frontend developer on the FinTech Rewards team, contributing to
+								features that enhance how businesses manage and benefit from their travel spend. I
+								collaborate closely with product and design to ship scalable, high-quality
+								user-facing features, while also supporting the team in improving architecture,
+								performance, and code maintainability.
 							</p>
-							<Fragment set:html={keyOutcomes} />
-							<ul>
-								<li>
-									Rearchitected and enhanced the back-office app supporting an internal team
-									responsible for a key revenue-generating function. Upon joining the company, took
-									ownership of the app's Proof of Concept (POC), overhauling its architecture by
-									modernizing the tech stack, fixing critical bugs, rearchitecting the system,
-									applying best design patterns, and adding new features to enhance functionality,
-									scalability, and maintainability.
-									<!-- <li>Collaborated closely on the development of the client-facing mobile app from its inception, working on features that directly impact user experience and business outcomes. This role involved key decisions on architecture and UI/UX design, ensuring a seamless, user-centric solution for effectively engaging and retaining app users.</li> -->
+							<Collapsible title="About the company">
+								<p>
+									Engine delivers a seamless, tech-driven travel experience by connecting companies
+									with top lodging partners through a platform that prioritizes efficiency, savings,
+									and exceptional support.
+								</p>
+							</Collapsible>
+						</AboutEntry>
+
+						<hr />
+
+						<AboutEntry
+							imgSrc="/assets/clever-logo.png"
+							imgAlt="Clever Real Estate's logo"
+							title="Full-stack Software Engineer @ Clever Real Estate"
+							subTitle="Jun 2024 - May 2025 · 1 yr · United States · Remote"
+							skills="Typescript, React, React Native, Redux/RTK, Vite, NextJS, Expo, Tailwind, Web Components, Python, Django, PostgreSQL, Docker, REST APIs, Sentry, CI/CD, NPM publishing, Design System"
+						>
+							<p>
+								Drove key product, technical and process enhancements that increased team
+								productivity and delivery quality while fueling business growth through feature
+								development on both client-facing and back-office web/mobile apps. Promoted the
+								adoption of modern technologies, established best practices, improved codebase
+								architecture, and enhanced CI/CD pipelines to support scalable, maintainable
+								development. Developed a resourceful framework for building reusable web components
+								and led the creation of an internal design system library, streamlining UI
+								implementation and code sharing across projects.
+							</p>
+							<Collapsible title="Key outcomes">
+								<ul class="text-base">
+									<li>
+										Rearchitected and enhanced the back-office app supporting an internal team
+										responsible for a key revenue-generating function. Upon joining the company,
+										took ownership of the app's Proof of Concept (POC), overhauling its architecture
+										by modernizing the tech stack, fixing critical bugs, rearchitecting the system,
+										applying best design patterns, and adding new features to enhance functionality,
+										scalability, and maintainability.
+									</li>
 									<li>
 										Proposed and developed a framework for building Web Components with React,
 										TypeScript, Tailwind, and Vite. This framework enabled the easy integration of
@@ -94,174 +109,206 @@ const aboutTheCompany = "<p><b>About the company:</b></p>";
 										implementation of consistent UI elements and code sharing across multiple
 										projects via a NPM package.
 									</li>
-								</li>
-							</ul>
-						</>
-					</AboutEntry>
-					<hr />
-					<AboutEntry
-						imgSrc="/assets/hinge-health-logo.jpg"
-						imgAlt="Hinge Health's logo"
-						title="Full-stack Software Engineer @ Hinge Health"
-						subTitle="Mar 2023 - May 2024 · 1 yr 3 mos · United States · Remote"
-						skills="Typescript, React Native, Expo, Redux/RTK, GraphQL/Apollo, Node, NestJS, Docker, Mixpanel, Datadog, Sentry, CI/CD"
-					>
-						<>
-							<p>
-								Hinge Health is a fast-growing digital health company based in San Francisco, USA,
-								pioneering the world’s most patient-centered Digital Musculoskeletal (MSK) Clinic.
-								At the Onboarding pod, contributed to improving onboarding and retention rates
-								through data-driven product development for the client-facing mobile app.
-							</p>
-							<Fragment set:html={keyOutcomes} />
-							<ul>
-								<li>
-									Acted as Technical Project Lead and Co-lead of feature development and technical
-									projects, collaborating with Product Managers and Designers to de-risk, plan, and
-									execute cost-effective solutions. Focused on clear communication, UX details, and
-									making strategic trade-offs between requirements and effort.
-								</li>
-								<li>
-									Drove efforts to enhance app performance, reduce complexity, and optimize the
-									onboarding feature - one of the highest-priority elements for the success of the
-									business and its patients.
-								</li>
-								<li>
-									Promoted best practices in automated testing, accessibility, code quality and
-									performance, ensuring high-quality standards across development.
-								</li>
-							</ul>
-							<Fragment set:html={aboutTheCompany} />
-							<p>
-								Hinge Health combines advanced wearable technology with a comprehensive clinical
-								care team to treat and reduce MSK pain, opioid use, and surgeries. Available to
-								millions of members, Hinge Health is the #1 Digital MSK Clinic for health plans and
-								employers, including Google, Boeing, Salesforce, and US Foods.
-							</p>
-						</>
-					</AboutEntry>
-					<hr />
-					<AboutEntry
-						imgSrc="/assets/geekie-logo.jpg"
-						imgAlt="Geekie's logo"
-						title="Full-stack Software Engineer @ Geekie"
-						subTitle="Feb 2021 - Mar 2023 · 2 yrs 2 mos · Brazil · Remote"
-						skills="Typescript, React, React Native, Redux, Python, Flask, Pyramid, MongoDB, PostgreSQL, Heroku, AWS, REST APIs, Mixpanel, New Relic, Sentry, SPA, PWA, CI/CD"
-					>
-						<>
-							<p>
-								Geekie is a leading ed-tech/edutech company that is reshaping the k-12 education
-								market in Brazil with its innovative data-driven platform and courseware. I
-								collaborated in both the client-facing web-mobile shared codebase and the
-								back-office systems, helping empower teachers, students and schools to potentialize
-								their learning achievements.
-							</p>
-							<Fragment set:html={keyOutcomes} />
-							<ul>
-								<li>
-									Collaborated on creating a feature for school coordinators that provided valuable
-									insights into student performance, helping identify at-risk students, communicate
-									with parents, and support teachers. By leveraging data from our platform, the
-									feature delivered actionable insights in a user-friendly format, enabling quick,
-									impactful decisions.
-								</li>
-								<li>
-									Worked with a team dedicated to improving the back-office system, streamlining the
-									process of inputting and editing courseware content. This effort enhanced the
-									flexibility and efficiency of managing educational materials, contributing to the
-									system’s overall user experience.
-								</li>
-								<li>
-									Resolved a security vulnerability exploited by students to access homework answers
-									by inspecting request payloads. Implemented a solution that involved
-									rearchitecting the content generation, storage, and delivery process, including
-									encrypting sensitive data to ensure secure access.
-								</li>
-							</ul>
-							<Fragment set:html={aboutTheCompany} />
-							<p>
-								Geekie is an edtech company founded in 2011 with a strong mission to address a
-								nationwide issue in Brazil: students graduating from high school without mastering
-								fundamental skills in Math and Portuguese. The company developed an educational
-								technology that is now considered one of the six most innovative in the world in the
-								education sector. In 2021, Geekie was recognized as having the highest-rated
-								educational material in Brazil.
-							</p>
-						</>
-					</AboutEntry>
-					<hr />
-					<AboutEntry
-						imgSrc="/assets/altave-logo.png"
-						imgAlt="ALTAVE's logo"
-						title="Marketing & Sales Manager @ ALTAVE (Aerospace Startup)"
-						subTitle="Jun 2016 - Apr 2019 · 2 yrs 11 mos · Brazil · In-office"
-					>
-						<>
-							<p>
-								Created and structured the Marketing department, then built and managed a team
-								responsible for the company's communications, sales marketing & branding, public
-								relations, sponsorships & social responsibility, and internal marketing
-								(endomarketing). As the company expanded, took on the responsibility of managing the
-								Marketing & Sales team, overseeing roles from designers to engineers. Implemented a
-								set of digital tools to improve company-wide productivity, including Slack for
-								internal communication, Weekdone for OKR tracking, and Zoho CRM for sales
-								management. Additionally, introduced the Predictable Revenue methodology, also known
-								as "sales machine".
-							</p>
-							<Fragment set:html={aboutTheCompany} />
-							<p>
-								ALTAVE develops lighter than air vehicles, was born in ITA's startup incubator and
-								is the only one of its kind in the Southern Hemisphere.
-							</p>
-						</>
-					</AboutEntry>
-					<hr />
-					<AboutEntry
-						imgSrc="/assets/bim-logo.jpg"
-						imgAlt="Building Information Modeling (BIM)"
-						title="Building Information Technology (BIM) Specialist & Consultant @ Construction Industry"
-						subTitle="Dec 2010 - Feb 2021 · 10 yrs 2 mos · Brazil · In-office"
-					>
-						<p>
-							IT Specialist & Consultant for Architecture, Engineering, and Construction companies,
-							aiding in the implementation, training, and optimization of their usage of
-							cutting-edge technology for building design and analysis.
-						</p>
-					</AboutEntry>
-				</div>
-			</section>
+								</ul>
+							</Collapsible>
+							<Collapsible title="About the company">
+								<p class="text-base">
+									Clever Real Estate’s expert advice, reviews of service providers, and data-driven
+									research help more than 12 million readers make smarter real estate decisions each
+									year. They also help over 30,000 people a year find the right real estate agent
+									for their needs by negotiating discounted rates with top-producing agents
+									nationwide. They've helped customers save more than $150 million on realtor fees,
+									without compromising on service or experience.
+								</p>
+							</Collapsible>
+						</AboutEntry>
 
-			<hr />
+						<hr />
 
-			<section>
-				<h2 class="section-title">Education</h2>
-				<div class="content">
-					<AboutEntry
-						imgSrc="/assets/42-logo.jpg"
-						imgAlt="42 school's logo"
-						title="École 42 - Computer Software Engineering"
-						subTitle="2019 - 2022"
-						skills="C/C++, Makefile, Shell/Bash, Git, Networks, Docker, SQL, Web (HTML, CSS, WordPress), Computer Graphics"
-					>
-						<p>
-							Studied Software Engineering at a disruptive higher education institution known for
-							its unique project-based approach and no-teacher, peer-to-peer learning model. As part
-							of a global initiative, École 42 offers an innovative way of learning technology,
-							emphasizing collaborative, self-directed learning without traditional classrooms or
-							instructors. Students, referred to as "cadets," are immersed in real-world projects,
-							developing both technical expertise and critical life skills. The curriculum, which is
-							entirely free for those who pass the rigorous selection process, fosters autonomy,
-							problem-solving, and resilience, preparing students for the fast-paced tech industry.
-						</p>
-					</AboutEntry>
-					<hr />
-					<AboutEntry
-						imgSrc="/assets/usp-logo.jpg"
-						imgAlt="USP's logo"
-						title="University of São Paulo (USP) - Master of Science, Architecture Technology"
-						subTitle="2015 - 2017"
-					>
-						<>
+						<AboutEntry
+							imgSrc="/assets/hinge-health-logo.jpg"
+							imgAlt="Hinge Health's logo"
+							title="Full-stack Software Engineer @ Hinge Health"
+							subTitle="Mar 2023 - May 2024 · 1 yr 3 mos · United States · Remote"
+							skills="Typescript, React Native, Expo, Redux/RTK, GraphQL/Apollo, Node, NestJS, Docker, Mixpanel, Datadog, Sentry, CI/CD"
+						>
+							<p>
+								Collaborated in Hinge Health’s innovative digital musculoskeletal care solution,
+								improving onboarding and retention rates through data-driven product development for
+								the client-facing mobile app. Served as Technical Project Lead and Co-lead on
+								feature development, collaborating with Product Managers and Designers to deliver
+								cost-effective, high-impact solutions. Drove efforts to enhance app performance and
+								optimize the onboarding feature, a key driver for business and patient success.
+								Promoted best practices in automated testing, accessibility, code quality, and
+								performance to maintain high development standards.
+							</p>
+							<Collapsible title="Key outcomes">
+								<ul class="text-base">
+									<li>
+										Acted as Technical Project Lead and Co-lead of feature development and technical
+										projects, collaborating with Product Managers and Designers to de-risk, plan,
+										and execute cost-effective solutions. Focused on clear communication, UX
+										details, and making strategic trade-offs between requirements and effort.
+									</li>
+									<li>
+										Drove efforts to enhance app performance, reduce complexity, and optimize the
+										onboarding feature - one of the highest-priority elements for the success of the
+										business and its patients.
+									</li>
+									<li>
+										Promoted best practices in automated testing, accessibility, code quality and
+										performance, ensuring high-quality standards across development.
+									</li>
+								</ul>
+							</Collapsible>
+							<Collapsible title="About the company">
+								<p class="text-base">
+									Hinge Health is a fast-growing digital health company based in San Francisco, USA,
+									pioneering the world’s most patient-centered Digital Musculoskeletal (MSK) Clinic.
+									They combine advanced wearable technology with a comprehensive clinical care team
+									to treat and reduce MSK pain, opioid use, and surgeries. Available to millions of
+									members, Hinge Health is the #1 Digital MSK Clinic for health plans and employers,
+									including Google, Boeing, Salesforce, and US Foods.
+								</p>
+							</Collapsible>
+						</AboutEntry>
+
+						<hr />
+
+						<AboutEntry
+							imgSrc="/assets/geekie-logo.jpg"
+							imgAlt="Geekie's logo"
+							title="Full-stack Software Engineer @ Geekie"
+							subTitle="Feb 2021 - Mar 2023 · 2 yrs 2 mos · Brazil · Remote"
+							skills="Typescript, React, React Native, Redux, Python, Flask, Pyramid, MongoDB, PostgreSQL, Heroku, AWS, REST APIs, Mixpanel, New Relic, Sentry, SPA, PWA, CI/CD"
+						>
+							<p>
+								Contributed to Geekie’s disruptive, data-driven edtech platform, supporting both
+								client-facing and back-office web/mobile apps to enhance K-12 education in Brazil.
+								Worked on the feature development that empowered school coordinators with actionable
+								insights on student performance, enabling timely interventions. Improved internal
+								tools for managing the courseware, increasing efficiency and flexibility for content
+								teams. Resolved a security vulnerability in the client-facing app that was being
+								exploited by students, implementing a robust solution to safeguard sensitive
+								educational data.
+							</p>
+							<Collapsible title="Key outcomes">
+								<ul class="text-base">
+									<li>
+										Collaborated on creating a feature for school coordinators that provided
+										valuable insights into student performance, helping identify at-risk students,
+										communicate with parents, and support teachers. By leveraging data from our
+										platform, the feature delivered actionable insights in a user-friendly format,
+										enabling quick, impactful decisions.
+									</li>
+									<li>
+										Worked with a team dedicated to improving the back-office system, streamlining
+										the process of inputting and editing courseware content. This effort enhanced
+										the flexibility and efficiency of managing educational materials, contributing
+										to the system’s overall user experience.
+									</li>
+									<li>
+										Resolved a security vulnerability exploited by students to access homework
+										answers by inspecting request payloads. Implemented a solution that involved
+										rearchitecting the content generation, storage, and delivery process, including
+										encrypting sensitive data to ensure secure access.
+									</li>
+								</ul>
+							</Collapsible>
+							<Collapsible title="About the company">
+								<p class="text-base">
+									Geekie is a leading ed-tech/edutech company that is reshaping the k-12 education
+									market in Brazil with its innovative data-driven platform and courseware. The
+									company was founded in 2011 with a strong mission to address a nationwide issue in
+									Brazil: students graduating from high school without mastering fundamental skills
+									in Math and Portuguese. Geekie has since developed an educational technology that
+									is now considered one of the six most innovative in the world in the education
+									sector. In 2021, Geekie was recognized as having the highest-rated educational
+									material in Brazil.
+								</p>
+							</Collapsible>
+						</AboutEntry>
+
+						<hr />
+
+						<AboutEntry
+							imgSrc="/assets/altave-logo.png"
+							imgAlt="ALTAVE's logo"
+							title="Marketing & Sales Manager @ ALTAVE (Aerospace Startup)"
+							subTitle="Jun 2016 - Apr 2019 · 2 yrs 11 mos · Brazil · In-office"
+						>
+							<p>
+								Created and structured the Marketing department, building and leading a
+								multidisciplinary team; as the company scaled, expanded leadership to include the
+								Sales team, overseeing roles ranging from designers to engineers. Drove
+								cross-company impact by implementing a set of digital tools that enhanced
+								productivity and collaboration, including Slack for internal communication, Weekdone
+								for OKR tracking, and Zoho CRM for sales operations. Also introduced the Predictable
+								Revenue framework (“sales machine”) to bring structure and scalability to the sales
+								process.
+							</p>
+							<Collapsible title="About the company">
+								<p class="text-base">
+									ALTAVE is recognized as the only developer and manufacturer of aerostat-based
+									solutions for surveillance and telecommunications in Brazil. Since 2011 the
+									company has been providing intelligent monitoring through video surveillance and
+									artificial intelligence for various sectors, such as Defense and Security, Energy,
+									Mining, Ports and Terminals, Agribusiness and Oil and Gas.
+								</p>
+							</Collapsible>
+						</AboutEntry>
+
+						<hr />
+
+						<AboutEntry
+							imgSrc="/assets/bim-logo.jpg"
+							imgAlt="Building Information Modeling (BIM)"
+							title="Building Information Technology (BIM) Specialist & Consultant @ Construction Industry"
+							subTitle="Dec 2010 - Feb 2021 · 10 yrs 2 mos · Brazil · In-office"
+						>
+							<p>
+								Consulted for Architecture, Engineering, and Construction firms, supporting the
+								implementation, training, and optimization of their usage of cutting-edge technology
+								for building design and analysis.
+							</p>
+						</AboutEntry>
+					</div>
+				</section>
+
+				<hr />
+
+				<section>
+					<h2 class="section-title">Education</h2>
+
+					<div class="content">
+						<AboutEntry
+							imgSrc="/assets/42-logo.jpg"
+							imgAlt="42 school's logo"
+							title="École 42 - Computer Software Engineering"
+							subTitle="2019 - 2022"
+							skills="C/C++, Makefile, Shell/Bash, Git, Networks, Docker, SQL, Web (HTML, CSS, WordPress), Computer Graphics"
+						>
+							<p>
+								Studied Software Engineering at a disruptive higher education institution known for
+								its unique project-based approach and no-teacher, peer-to-peer learning model. As
+								part of a global initiative, École 42 offers an innovative way of learning
+								technology, emphasizing collaborative, self-directed learning without traditional
+								classrooms or instructors. Students, referred to as "cadets," are immersed in
+								real-world projects, developing both technical expertise and critical life skills.
+								The curriculum, which is entirely free for those who pass the rigorous selection
+								process, fosters autonomy, problem-solving, and resilience, preparing students for
+								the fast-paced tech industry.
+							</p>
+						</AboutEntry>
+
+						<hr />
+
+						<AboutEntry
+							imgSrc="/assets/usp-logo.jpg"
+							imgAlt="USP's logo"
+							title="University of São Paulo (USP) - Master of Science, Architecture Technology"
+							subTitle="2015 - 2017"
+						>
 							<p><b>Grade:</b> 10/10.</p>
 							<p>
 								<b>Research Thesis:</b> “BPS (Building Performance Simulation) and BIM (Building Information
@@ -280,32 +327,34 @@ const aboutTheCompany = "<p><b>About the company:</b></p>";
 								building lifecycle management, making a meaningful impact on the future of
 								architectural practice.
 							</p>
-						</>
-					</AboutEntry>
-					<hr />
-					<AboutEntry
-						imgSrc="/assets/ensag-logo.png"
-						imgAlt="ENSAG's logo"
-						title="École Nationale Supérieure d'Architecture de Grenoble (ENSAG) - Academic Exchange, Master 1"
-						subTitle="2011 - 2012"
-					>
-						<p>
-							Participated in an academic exchange program at one of France's leading architecture
-							schools. At ENSAG, I collaborated with both local and international students on
-							innovative architectural projects, where we explored cutting-edge generative design
-							technologies. The exchange allowed me to engage with diverse cultural perspectives on
-							architecture, enriching my approach to design and expanding my understanding of how
-							digital tools can enhance architectural creativity and problem-solving.
-						</p>
-					</AboutEntry>
-					<hr />
-					<AboutEntry
-						imgSrc="/assets/usp-logo.jpg"
-						imgAlt="USP's logo"
-						title="University of São Paulo (USP) - Bachelor's Degree, Architecture and Urban Planning"
-						subTitle="2008 - 2014"
-					>
-						<>
+						</AboutEntry>
+
+						<hr />
+
+						<AboutEntry
+							imgSrc="/assets/ensag-logo.png"
+							imgAlt="ENSAG's logo"
+							title="École Nationale Supérieure d'Architecture de Grenoble (ENSAG) - Academic Exchange, Master 1"
+							subTitle="2011 - 2012"
+						>
+							<p>
+								Participated in an academic exchange program at one of France's leading architecture
+								schools. At ENSAG, I collaborated with both local and international students on
+								innovative architectural projects, where we explored cutting-edge generative design
+								technologies. The exchange allowed me to engage with diverse cultural perspectives
+								on architecture, enriching my approach to design and expanding my understanding of
+								how digital tools can enhance architectural creativity and problem-solving.
+							</p>
+						</AboutEntry>
+
+						<hr />
+
+						<AboutEntry
+							imgSrc="/assets/usp-logo.jpg"
+							imgAlt="USP's logo"
+							title="University of São Paulo (USP) - Bachelor's Degree, Architecture and Urban Planning"
+							subTitle="2008 - 2014"
+						>
 							<p>
 								Graduated with a Bachelor's degree in Architecture and Urban Planning from the
 								University of São Paulo (USP), one of the most prestigious institutions in Latin
@@ -320,43 +369,43 @@ const aboutTheCompany = "<p><b>About the company:</b></p>";
 								<b>Final paper:</b> "School architecture in the knowledge era: the renovation of space
 								for the construction of new generations"
 							</p>
-						</>
-					</AboutEntry>
-				</div>
-			</section>
+						</AboutEntry>
+					</div>
+				</section>
 
-			<hr />
+				<hr />
 
-			<section>
-				<h2 class="section-title">Soft Skills</h2>
-				<div class="content content-bullets">
-					<ul>
-						<li>Results-driven & very organized</li>
-						<li>Strong leadership & mentorship</li>
-						<li>Highly collaborative</li>
-						<li>Effective communicator</li>
-						<li>Agile methodologies</li>
-					</ul>
-				</div>
-			</section>
+				<section>
+					<h2 class="section-title">Soft Skills</h2>
+					<div class="content content-bullets">
+						<ul>
+							<li>Results-driven & very organized</li>
+							<li>Strong leadership & mentorship</li>
+							<li>Critical thinking & detail oriented</li>
+							<li>Highly collaborative & effective communicator</li>
+							<li>Agile & Scrum methodologies</li>
+						</ul>
+					</div>
+				</section>
 
-			<hr />
+				<hr />
 
-			<section>
-				<h2 class="section-title">Languages</h2>
-				<div class="content content-bullets">
-					<ul>
-						<li><b>English</b> - fluent/bilingual</li>
-						<li><b>Portuguese</b> - native</li>
-						<li><b>French</b> - fluent</li>
-						<li><b>Spanish</b> - fluent</li>
-					</ul>
-				</div>
-			</section>
-		</main>
-
-		<ContactCTA />
+				<section>
+					<h2 class="section-title">Languages</h2>
+					<div class="content content-bullets">
+						<ul>
+							<li><b>English</b> - fluent/bilingual</li>
+							<li><b>Portuguese</b> - native</li>
+							<li><b>French</b> - fluent</li>
+							<li><b>Spanish</b> - fluent</li>
+						</ul>
+					</div>
+				</section>
+			</main>
+		</div>
 	</div>
+
+	<ContactCTA />
 </BaseLayout>
 
 <style>
@@ -436,7 +485,7 @@ const aboutTheCompany = "<p><b>About the company:</b></p>";
 	@media (min-width: 48rem) {
 		.about {
 			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
+			grid-template-columns: 1fr 3fr;
 			gap: 3.5rem;
 		}
 
@@ -447,7 +496,7 @@ const aboutTheCompany = "<p><b>About the company:</b></p>";
 		.hero {
 			display: grid;
 			grid-template-columns: 6fr 4fr;
-			gap: 3.75rem;
+			gap: 2rem;
 		}
 
 		.hero img {

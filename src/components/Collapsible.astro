@@ -1,0 +1,56 @@
+---
+import Icon from "./Icon.astro";
+
+/**
+ * Collapsible component
+ *
+ * Displays a heading row with a down‑chevron. Clicking the row expands/collapses the bodytext.
+ * ‑ Accessible, zero‑JS by default (native <details>).
+ * ‑ Chevron icon rotates so it always reflects the current open state.
+ *
+ * Props
+ * ─────
+ *  - title   string   Heading text shown when collapsed
+ *  - open?   boolean  Initially expanded? (default: false)
+ *  - class?  string   Extra classes for the outer <details>
+ *
+ * Slots
+ * ─────
+ *  - default slot: Content revealed when the component is open.
+ *
+ * Example
+ * -------
+ *   <Collapsible title="What is Astro?">
+ *     Astro is an all‑in‑one web framework for building content‑rich sites.
+ *   </Collapsible>
+ */
+
+export interface Props {
+	title: string;
+	open?: boolean;
+	class?: string;
+}
+
+const { title, open = false, class: className = "" } = Astro.props as Props;
+---
+
+<details
+	class={`group border border-accent-regular hover:border-accent-hover rounded-lg overflow-hidden ${className}`}
+	{...open ? { open: true } : {}}
+>
+	<summary
+		class="flex cursor-pointer list-none items-center justify-between px-4 py-3 font-medium [&::-webkit-details-marker]:hidden"
+	>
+		<span class="font-bold">{title}</span>
+		<Icon
+			icon="chevron-down"
+			strokeWidth={4}
+			class="transition-transform duration-200 ease-in-out group-open:rotate-180"
+			aria-hidden="true"
+		/>
+	</summary>
+
+	<div class="px-4 pb-4">
+		<slot />
+	</div>
+</details>

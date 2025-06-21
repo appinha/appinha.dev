@@ -2,17 +2,22 @@
 type Props = {
 	imgSrc: string;
 	imgAlt: string;
+	imgClass?: string;
 	title: string;
 	subTitle: string;
 	skills?: string;
 };
 
-const { imgSrc, imgAlt, title, subTitle, skills } = Astro.props;
+const { imgSrc, imgAlt, imgClass, title, subTitle, skills } = Astro.props;
 ---
 
 <div class="flex flex-col gap-4 md:gap-8">
 	<div class="flex flex-row gap-4 md:gap-6">
-		<img alt={imgAlt} src={imgSrc} class="max-h-[60px] object-contain object-center" />
+		<img
+			alt={imgAlt}
+			src={imgSrc}
+			class={`max-h-[60px] object-contain object-center ${imgClass}`}
+		/>
 		<div class="flex flex-col justify-between gap-2">
 			<h3>{title}</h3>
 			<span class="md:text-md text-base text-gray-400">{subTitle}</span>
